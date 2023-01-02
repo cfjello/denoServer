@@ -199,6 +199,8 @@ async function sheetHandler(req: RequestExtended): Promise<Response> {
 //
 // Start the Server
 //
-const PORT = 3000;
-serve(router, { port: PORT });
-console.log(`🚀 Server is running on http://localhost:${PORT}`);
+// const PORT = 3000;
+// serve(router, { port: PORT });
+// console.log(`🚀 Server is running on http://localhost:${PORT}`);
+serve(router)
+
