@@ -1,29 +1,27 @@
-import { Logger } from "https://raw.githubusercontent.com/deepakshrma/deno_util/master/logger.ts";
-import { serve} from "https://deno.land/std/http/server.ts"
-import { Status } from 'https://deno.land/std@0.53.0/http/http_status.ts';
-import { path } from "https://deno.land/x/compress@v0.4.1/deps.ts";
+import { serve} from    "https://deno.land/std/http/server.ts"
+import { Status } from  'https://deno.land/std@0.53.0/http/http_status.ts';
+import { path } from    "https://deno.land/x/compress@v0.4.1/deps.ts";
 
 const fromRoot = (str: string) => path.normalize(Deno.cwd() + ( str.startsWith('/') ? str : '/' + str ) );
 
 type RequestExtended = Request & { params: Record<string, string>, query: Record<string, string> }
-const logger = new Logger();
 
 //
 // Mime types
 //
 const extToMime = new Map([
-  [ 'html', "text/html; charset=utf-8" ],
-  [ 'png', "image/svg+xml" ],
-  [ 'svg', "image/svg+xml" ],
-  [ 'json', "application/json; charset=utf-8" ]
+    [ 'html', "text/html; charset=utf-8" ],
+    [ 'png', "image/svg+xml" ],
+    [ 'svg', "image/svg+xml" ],
+    [ 'json', "application/json; charset=utf-8" ]
 ]) 
 //
 // Routes
 //
 type RouteIntf = {
-  name: string; // name of the route, just for tracking
-  path: string; // path pattern for handler
-  handler: (req: RequestExtended) => Promise<Response>; // handler to handle request
+    name: string; // name of the route, just for tracking
+    path: string; // path pattern for handler
+    handler: (req: RequestExtended) => Promise<Response>; // handler to handle request
 }
 
 const routes: RouteIntf[] = [
@@ -36,67 +34,64 @@ const routes: RouteIntf[] = [
 ]
 
 function routeNotFound(req: RequestExtended): Response {
-  const body = JSON.stringify({ message: `${req.params.path}  NOT FOUND` })
-  return new Response(body, {
-    status: Status.NotFound,
-    headers: {
-      "content-type": "application/json; charset=utf-8",
-    },
-  })
+    const body = JSON.stringify({ message: `${req.params.path}  NOT FOUND` })
+    return new Response(body, {
+        status: Status.NotFound,
+        headers: {
+        "content-type": "application/json; charset=utf-8",
+        },
+    })
 }
 
 async function router(req: Request): Promise<Response> {
-  logger.info("%s\t/%s:\t%s", new Date().toISOString() , req.method, req.url)
-  const url = new URL(req.url);
-  const fullPath = url.pathname;
-  //
-  // create query object
-  //
-  (req as RequestExtended).query = {};
-  for(const p of url.searchParams) (req as RequestExtended).query[p[0]]=p[1];
-  let found = false
-  for (const route of routes) {
-      if ( found ) break;
-      const basePath = route.path.replace(/[:].*$/,'')
-      // console.log( `${fullPath} should start with ${basePath}` )
-      if ( fullPath.startsWith(basePath) ) {
-          const routePathArr = route.path.split('/');
-          const fullPathArr = fullPath.split('/');
-          (req as RequestExtended).params = {path: basePath};
-          let i = 0
-          for( const p of routePathArr ) {
-              if ( p.startsWith(':') ) {
-                  (req as RequestExtended).params[p.replace(':', '')] = fullPathArr[i] ?? ''
-              }
-              i++
-          }
-          // Add any additional anonymous path elements 
-          for ( let j = i ; j < fullPathArr.length; j++ )
-              (req as RequestExtended).params[`p${j}`] = fullPathArr[j]
-          found = true
-          return await route.handler(req as RequestExtended)
-      }
-  }
-  return routeNotFound(req as RequestExtended)
+    console.info(`${new Date().toISOString()}\t${req.method}\t${req.url}`)
+    const url = new URL(req.url);
+    const fullPath = url.pathname;
+    //
+    // create query object
+    //
+    (req as RequestExtended).query = {};
+    for(const p of url.searchParams) (req as RequestExtended).query[p[0]]=p[1];
+    let found = false
+    for (const route of routes) {
+        if ( found ) break;
+        const basePath = route.path.replace(/[:].*$/,'')
+        if ( fullPath.startsWith(basePath) ) {
+            const routePathArr = route.path.split('/');
+            const fullPathArr = fullPath.split('/');
+            (req as RequestExtended).params = {path: basePath};
+            let i = 0
+            for( const p of routePathArr ) {
+                if ( p.startsWith(':') ) {
+                    (req as RequestExtended).params[p.replace(':', '')] = fullPathArr[i] ?? ''
+                }
+                i++
+            }
+            // Add any additional anonymous path elements 
+            for ( let j = i ; j < fullPathArr.length; j++ )
+                (req as RequestExtended).params[`p${j}`] = fullPathArr[j]
+            found = true
+            return await route.handler(req as RequestExtended)
+        }
+    }
+    return routeNotFound(req as RequestExtended)
 }
 
 //
 // Handlers
 //
 async function handler( req: RequestExtended) {
-  // List the posts in the `blog` directory located at the root
-  // of the repository.
-  const posts = [];
-  for await (const post of Deno.readDir(`./blog`)) {
-    posts.push(post);
-  }
-
-  // Return JSON.
-  return new Response(JSON.stringify(posts, null, 2), {
-    headers: {
-      "content-type": "application/json",
-    },
-  });
+    // List the posts in the `blog` directory located at the root of the repository.
+    const posts = [];
+    for await (const post of Deno.readDir(`./blog`)) {
+        posts.push(post);
+    }
+    // Return JSON.
+    return new Response(JSON.stringify(posts, null, 2), {
+        headers: {
+        "content-type": "application/json",
+        },
+    });
 }
 
 async function staticFile(req: RequestExtended, _filePath = '' ): Promise<Response> {
@@ -141,5 +136,9 @@ async function testHandler(req: RequestExtended): Promise<Response> {
   }
   return new Response(`CWD: '${Deno.cwd()}'` + path + '\nParams:' + params + '\nQuery:' + query + "\nURL:\n" + url.toString() + headers + `\nBody: '${body}'`);
 }
-
-serve(router);
+//
+// Start the Server
+//
+const PORT = 3000;
+serve(router, { port: PORT });
+console.log(`🚀 Server is running on http://localhost:${PORT}`);
