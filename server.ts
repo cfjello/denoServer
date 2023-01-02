@@ -104,27 +104,40 @@ async function handler( req: RequestExtended) {
 }
 
 async function staticFile(req: RequestExtended, __filePath = '' ): Promise<Response> {
-  // handle static files
-  let filePath = ''
-  try {
-      // const url = new URL(req.url);
-      // const fileName = filePath.length > 0 ? filePath : JSON.stringify(url.pathname)
-      const _filePath = __filePath !== '' ? __filePath :  req.params.path + '/' + req.params.fileName
-      filePath =  _filePath.startsWith('/') ? '.' + _filePath : './' + _filePath
-      console.debug(`Trying to read: '${filePath}'`)
-      const data = await Deno.readFile( filePath)
-      const ext = filePath.split('.').pop()
-      console.log(`Server sends file: ${filePath} with content-type: ${extToMime.get(ext ?? 'html')!}`)
-      return new Response(data, {
-          status: Status.OK,
-          headers: {
-              "content-type": extToMime.get(ext ?? 'html')!,
-          },
-      });   
-  } catch (err) {
-      console.error(`staticFile handler for ${filePath} in directory ${Deno.cwd()} got: ${err}`)
-      return routeNotFound(req)
-  }
+    // handle static files
+    let filePath = ''
+    try {
+        // const url = new URL(req.url);
+        // const fileName = filePath.length > 0 ? filePath : JSON.stringify(url.pathname)
+        const _filePath = __filePath !== '' ? __filePath :  req.params.path + '/' + req.params.fileName
+        filePath =  _filePath.startsWith('/') ? Deno.cwd() + _filePath : Deno.cwd() + '/' + _filePath
+        console.debug(`Trying to read: '${filePath}'`)
+        // Reading absolute path
+        const dataUint = await Deno.readFile( filePath) 
+        const ext = filePath.split('.').pop()
+        console.log(`Server sends file: ${filePath} with content-type: ${extToMime.get(ext ?? 'html')!}`)
+        if ( ext === 'html' || ext === 'svg' ) {
+            // Decode the Uint8Array as string.
+            const data = new TextDecoder().decode(dataUint);
+            return new Response(data, {
+                status: Status.OK,
+                headers: {
+                    "content-type": extToMime.get(ext ?? 'html')!,
+                },
+            });   
+        }
+        else {
+            return new Response(dataUint, {
+                status: Status.OK,
+                headers: {
+                    "content-type": extToMime.get(ext ?? 'html')!,
+                },
+            }); 
+        }
+    } catch (err) {
+        console.error(`staticFile handler for ${filePath} in directory ${Deno.cwd()} got: ${err}`)
+        return routeNotFound(req)
+    }
 }
 
 async function pngHandler(req: RequestExtended ): Promise<Response> {
