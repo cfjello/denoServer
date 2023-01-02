@@ -1,10 +1,19 @@
 import { serve} from    "https://deno.land/std/http/server.ts"
 import { Status } from  'https://deno.land/std@0.53.0/http/http_status.ts';
 import { path } from    "https://deno.land/x/compress@v0.4.1/deps.ts";
+import { LeadSheet } from "https://raw.githubusercontent.com/cfjello/leadsheet/main/mod.ts"
 
 const fromRoot = (str: string) => path.normalize(Deno.cwd() + ( str.startsWith('/') ? str : '/' + str ) );
 
 type RequestExtended = Request & { params: Record<string, string>, query: Record<string, string> }
+
+
+//
+// Initialize data for main page
+//
+const LS = new LeadSheet()
+LS.debug = false
+await LS.loadAllSheets()
 
 //
 // Mime types
@@ -25,12 +34,12 @@ type RouteIntf = {
 }
 
 const routes: RouteIntf[] = [
-  { name: "static", path: "/html/:fileName",             handler: staticFile},
-  // { name: "menu",   path: "/api/v1/menu",             handler: menuHandler},
-  // { name: "sheet",  path: "/api/v1/sheet/:sheetName", handler: sheetHandler},
-  { name: "test",   path: "/test/:arg1/:arg2",           handler: testHandler },
-  { name: "favicon",   path: "/favicon.png",             handler: pngHandler },
-  { name: "main",   path: "/",                           handler: handler},
+  { name: "static",     path: "/html/:fileName",            handler: staticFile},
+  { name: "menu",       path: "/api/v1/menu",               handler: menuHandler},
+  { name: "sheet",      path: "/api/v1/sheet/:sheetName",   handler: sheetHandler},
+  { name: "test",       path: "/test/:arg1/:arg2",          handler: testHandler },
+  { name: "favicon",    path: "/favicon.ico",               handler: pngHandler },
+  { name: "main",       path: "/",                          handler: mainPage},
 ]
 
 function routeNotFound(req: RequestExtended): Response {
@@ -59,11 +68,11 @@ async function router(req: Request): Promise<Response> {
         if ( fullPath.startsWith(basePath) ) {
             const routePathArr = route.path.split('/');
             const fullPathArr = fullPath.split('/');
-            (req as RequestExtended).params = {path: basePath};
+            (req as RequestExtended).params = {path: basePath.replaceAll('%20', ' ')};
             let i = 0
             for( const p of routePathArr ) {
                 if ( p.startsWith(':') ) {
-                    (req as RequestExtended).params[p.replace(':', '')] = fullPathArr[i] ?? ''
+                    (req as RequestExtended).params[p.replace(':', '')] = (fullPathArr[i] ?? '').replaceAll('%20', ' ')
                 }
                 i++
             }
@@ -100,10 +109,10 @@ async function staticFile(req: RequestExtended, _filePath = '' ): Promise<Respon
       // const url = new URL(req.url);
       // const fileName = filePath.length > 0 ? filePath : JSON.stringify(url.pathname)
       const filePath = _filePath !== '' ? _filePath :  req.params.path + '/' + req.params.fileName
-      console.debug(`Trying to read: '${fromRoot(filePath)}'`)
+      // console.debug(`Trying to read: '${fromRoot(filePath)}'`)
       const data = await Deno.readFile(fromRoot(filePath))
       const ext = filePath.split('.').pop()
-      console.log(`Server sends file: ${req.params.fileName}`)
+      console.log(`Server sends file: ${filePath} with content-type: ${extToMime.get(ext ?? 'html')!}`)
       return new Response(data, {
           status: Status.OK,
           headers: {
@@ -117,7 +126,7 @@ async function staticFile(req: RequestExtended, _filePath = '' ): Promise<Respon
 }
 
 async function pngHandler(req: RequestExtended ): Promise<Response> {
-  return await staticFile(req, req.params.path)
+  return await staticFile(req, req.params.path.replace('.ico', '.png'))
 } 
 
 async function testHandler(req: RequestExtended): Promise<Response> {
@@ -135,6 +144,57 @@ async function testHandler(req: RequestExtended): Promise<Response> {
       headers += `\n\t${key}: ${value}`
   }
   return new Response(`CWD: '${Deno.cwd()}'` + path + '\nParams:' + params + '\nQuery:' + query + "\nURL:\n" + url.toString() + headers + `\nBody: '${body}'`);
+}
+
+
+async function mainPage(req: RequestExtended): Promise<Response> {
+    const fileName = "/html/LeadSheetVue.html"
+    return await staticFile(req, fileName)
+}
+
+async function menuHandler(req: RequestExtended): Promise<Response> {
+    console.log(`Server GOT request for MenuItems`)
+    if ( ! LS.menuList) {
+         console.log(`Server cannot find the Menu List`) 
+         return routeNotFound(req)
+    }
+    else { 
+        // We have a menu
+        const data = JSON.stringify(await LS.getMenuItems())
+        // console.log(`Server sending Menu List data: ${data}`)
+        return new Response(data , {
+            status: Status.OK,
+            headers: {
+                "content-type": extToMime.get('json')!,
+            },
+        })
+    }
+}
+
+async function sheetHandler(req: RequestExtended): Promise<Response> {
+    console.log(`Server GOT request for Sheet`)
+    
+    const sheet =  req.params.sheetName ?? '__undefined__'
+
+    const transpose = parseInt(req.query.t)
+    const sharpFlat = req.query.sf
+    const reload = req.query.rl === 'yes' ? true: false
+    const data = await LS.getRestSheet(sheet, transpose, sharpFlat, reload )
+    if ( sheet === '__undefined__' || ! data ) {
+         // console.log(`Server cannot find the Song named ${sheet}`) 
+         return routeNotFound(req)
+    }   
+    else { 
+        // We have a menu
+        // console.log(`Server sending Sheet: ${sheet}`)
+        const dataJson = JSON.stringify(data)
+        return new Response(dataJson , {
+            status: 200,
+            headers: {
+                "content-type": extToMime.get('json')!,
+            },
+        })
+    }
 }
 //
 // Start the Server

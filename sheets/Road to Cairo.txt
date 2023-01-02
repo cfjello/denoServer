@@ -1,0 +1,74 @@
+Title: Road to Cairo 
+Author: David Ackles 
+Key: D Minor
+Meter: 6/8
+
+Intro:       
+| Bbmaj7 | Dm add9 | Bbmaj7 | A7#5  |
+Verse 1:
+| Dm add9  | A7 add#5/C# | Dm add9/C   | G79/B  
+_       A fella    _told me _ This here road _leads into Cairo
+| Gm79/Bb  | F6/A     | F6/G  | A7#5
+_         I got to _get me a _ride _
+| Dm add9    | A7 add#5/C#  | Dm add9/C  | G79/B     
+_ I got to   _go back _ Go back  _to my children
+| Gm79/Bb   | A7#5        |  Dm add9  | Dm add9/C | 
+_  I got to _see my little _bride _
+
+Chorus 1:
+| Bbmaj7     |  C679                |  Bbmaj7     |  C679    
+_          I been _traveling _Been gone a _long, long time
+| Bbmaj7     |  C679      |  Dm add9          | Dm add9 /  Dm add9/C  / |
+_       And so I _don't know _what I may find _
+| Bbmaj7      |  C679                | Bbmaj7      |  C679     
+_I’m scared of _what I'll find _But still I _can’t explain
+| Bbmaj7              |  C679      |  A7#5 | A7#5
+_  I just got to _see them     a-_gain _
+
+Verse 2[use: Verse 1, textOnly]:
+_Hey thanks for _stopping. _Are you headed _down to Cairo?
+_I wrecked my _Lincoln in _Saint Joan 
+_Why too little _ old Cairo? _No special rea-_son
+_Look up some _folks that I _used to know 
+
+Chorus 2[use: Chorus 1, textOnly]:
+_Me, I _traveled some _Had my _share of fun
+_Now that's the _life that I _choose to live _
+_Sure I've _played and lost _But who _minds the cost
+_You got to _take much more than you _give _
+
+Solo 1:
+| Dm add9 [S:D Harm. Minor] | A7 add#5/C# | Dm add9/C [S:D Aeolian/F]   | G79/B  [S:D Dorian/C Major]
+| Gm79/Bb [S:D Aeolian/F Major]  | F6/A     | F6/G  | A7#5 [S:D Harm. Minor]
+| Dm add9 [S:D Harm. Minor]   | A7 add#5/C#  | Dm add9/C [S:D Aeolian/F] | G79/B [S:D Dorian/C Major]    
+| Gm79/Bb [S:D Aeolian/F]   | A7#5        |  Dm add9 [S:D Aeolian/F] | Dm add9/C |
+
+Solo 2:
+| Bbmaj7 [S:D Aeolian/F Major]    |  C679                |  Bbmaj7     |  C679    
+_          I been _traveling _Been gone a _long, long time
+| Bbmaj7     |  C679      |  Dm add9          | Dm add9 /  Dm add9/C  / |
+_       And so I _don't know _what I may find _
+| Bbmaj7      |  C679                | Bbmaj7      |  C679     
+_I’m scared of _what I'll find _But still I _can’t explain
+| Bbmaj7              |  C679      |  A7#5 [S:D Harm. Minor] | A7#5
+_  I just got to _see them     a-_gain _
+
+Verse 3[use: Verse 1, textOnly]:
+_Hey, can I _try your cigar? _Oh, I _sure like your car
+_Bought from your _daddy as a _gift _
+_Say, on _second thought. _All the gifts that _I haven't bought
+_You can drop me _here. Thanks _for the lift
+
+Chorus 3[use: Chorus 1, textOnly]:
+_Yes, I've _traveled some. _Yes, I've _been a bum
+_Never had a _dime for _gift and stuff
+_Like to make my _own way. _Told her I _couldn't stay
+_To see my _children _poor as sin _
+
+Verse 4[use: Verse 1, textOnly]:
+_I know this _road, _this road it _leads straight into Cairo
+_it twenty-two _miles _straight ahead
+_but I can't _walk down, _I can’t walk down this _road to Cairo
+_They're better _off thinking _that I'm dead
+
+Coda:  | Bbmaj7 | Dm add9 [Note: repeat Coda ad hoc]| 

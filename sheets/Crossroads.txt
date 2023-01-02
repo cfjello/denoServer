@@ -1,0 +1,60 @@
+Title: Crossroads
+Author: Robert Johnson
+Key: F#m
+Tempo: 106
+
+Intro: 
+| F#m7,2   B7sus4/E,8 B7sus4/E,4 B7,8 | B7,t1   | F#m7,2   B7sus4/E,8 B7sus4/E,4 B7,8 | B7,t1 
+_ _ _ _ _   _ _ _ _  _ I went 
+ 
+Verse 1:
+| F#m7          B7sus4/E         | B7               | F#m7         B7sus4/E       | B7   
+_down to the _crossroads         _fell down on my   _knees  _   _
+| Aadd2,2         Gmaj7,4+8  Dmaj7,8 | Dmaj7,t2   E7sus4/E  E7sus4/F | F#m7         B7sus4/E       | B7 
+_down to the _crossro-_oo-    _oads    _         _fell down _on my     _knees _ _ I went
+| Aadd2,2                 B7,4+8      C#aug7,8   | C#aug7,t4   Gmaj7b5,8 Gmaj7b5,t4 F#m7,8| F#m7,t2         G#m7       | Bsus2/D [Note:break] 
+_Asked the lord for _mercy - _y- _y,                   _ safe me    _if you     _please _ _
+
+Verse 2:
+| F#m7          B7sus4/E         | B7               | F#m7         B7sus4/E       | B7   
+_Standing at the _crossroads, _I tried to flag a _ ride _ _
+| Aadd2,2         Gmaj7,4+8  Dmaj7,8 | Dmaj7,t2   E7sus4/E  E7sus4/F | F#m7         B7sus4/E       | B7
+_Standing at the _crossro-_ oo- _oads, _           _I tried to _flag a _ride _ _ No-
+| Aadd2                 B7         | C#aug7   Gmaj7b5 |  F#m7         G#m7       | Bsus2/D   E7sus4 
+_body seemed to _know me- _ee, everybody _passed me _by _ _ _ 
+
+Bridge: 
+| Fmaj7                        | Ebmaj7                          | Bbmaj7 | A7#5 
+_Sun is going down now, _dark’s going to catch me _ here _
+| Dm79              | G7                  
+_ I haven't got no _loving sweet woman, to 
+| Asus2                | B7sus2sus4 |  B7sus2sus4 |
+_love and to fell my _ care _
+
+Solo Verse:
+| F#m7 [S:F# Dorian/E Major]         B7sus4/E       | B7 
+| F#m7         B7sus4/E       | B7 
+| Aadd2[S: B Aeolian/D Major]            | Gmaj7         | Dmaj7,2   E7sus4/E  E7sus4/F
+| F#m7         B7sus4/E       | B7 
+| Aadd2 [S:F# Dorian/E Major]   B7       | C#aug7  [S: D Mel. Minor]  Gmaj7b5 [S: G Lydian/D Major]
+| F#m7  [S:F# Dorian/E Major]   G#m7     | Bsus2/D [S: E Mixo/A Major]   E7sus4 |
+
+Solo Bridge:
+| Fmaj7 [S:F Major] | Ebmaj7 [S:Bb Major] | Bbmaj7 | A7#5 [S: Bb Mel. Minor]
+| Dm79 [S:D Dorian] | G7   | Asus2 [S:A Mixo/D Major] | B7sus2sus4 [S:B Mixo/E Major] |  B7sus2sus4 |
+
+Bridge 2 [use: Bridge, textOnly]: 
+_Going down to Rosedale's, _take my rider by my _ side  _           
+_We can still barrel-_house baby 
+_down by the river-_side _
+
+Verse 3 [use: Verse 1, textOnly]:
+_Run, you can't _run, _tell my friend boy Willy _Brown _ _
+_Run, you can't _run, _tell my friend boy Willy _ Brown _ _ That I’m 
+_standing at the _crossro-_ads, and I be-_lieve I’m sinking _down _ and I be-_lieve I’m sinking
+
+Coda:
+| F#m7   B7sus4/E | B7                      | F#m7   B7sus4/E | B7 
+_down. Wo-_o-o-_oh. I believe I’m sinking    _down. Wo-_o-o-_oh. I’m sinking 
+| F#m7   B7sus4/E | B7  | F#m7 [Note: break] 
+_down _ _ I believe I’m sinking  _down

@@ -1,0 +1,53 @@
+Title: Broken Wings
+Author: John Mayall
+Key: G Minor, 
+Meter: 4/4
+Tempo: 90
+
+Intro:
+| Bbadd9   | Cadd9,2  Cm7/F,4   D7+#9/F#,4  
+| Gm,2  C79,4 Cm7/F,4  | Gm,2  C79,4 Cm7/F,4 |                    
+
+Verse 1:
+| Gm,2          C79,2       | Ebmaj7,2  Em9b5/E,4  Cm7/F,4  
+_Somebody _broke your wings.  _Little bird, _you _can't 
+| Gm          C79                      | Ebmaj7    Db7b5
+_fly.   _  _  _ 
+| Cm7         Bbadd9/D       | Gm/Eb,2 Gm/E,4  Cm7/F,4  
+_Somebody _hurt you bad. _Beaten   _down  and _left to 
+| Gm          C79   | Ebmaj7     Am7b5
+_cry.     _  _  _   And the
+| Bbadd9    | Bbadd9/G     | Cadd9,2  Cm7/F,4   D7+#9/F#,4    
+_Price you'll have to _pay, You'll be _payin' in years of your 
+| Gm          C79    | Ebmaj7,2  Em7b5/E,4  Cm7/F,4  
+_life. _ _ _ _
+
+Verse 2 [use: Verse 1, textOnly]:
+_Somebody _ Is to blame. _Can't you see _ I'm _ feelin' 
+_ bad
+_Somebody _got away, _ and It _ makes _ me feel 
+_ sad._ _ _ And the 
+_ price you'll have to _pay, you'll be _payin' for years of your 
+_ life. _ _ _ _
+
+Solo:
+| Gm,2 [S: G Dorian]  C79,2   | Ebmaj7,2 [S: G Min] Em9b5/E,4 [S: G Dorian]  Cm7/F,4  
+| Gm          C79                      | Ebmaj7    Db7b5 [S: Ab Mel. Minor] 
+| Cm7 [S: G Min]  Bbadd9/D       | Gm/Eb,2 Gm/E,4  Cm7/F,4  
+| Gm          C79   | Ebmaj7     Am7b5
+| Bbadd9    | Bbadd9/G     | Cadd9,2  Cm7/F,4   D7+#9/F#,4 
+| Gm          C79    | Ebmaj7,2  Em7b5/E,4  Cm7/F,4  |
+
+Verse 3 [use: Verse 1, textOnly]:
+_Somebody _gotta help you. _I be-_lieve I _love you 
+_ so.
+_ Somebody's _gonna touch you. _I don't be-_lieve I'll _let you 
+_ go. _ _ _ And the
+_ love I have to _ give, I'll be _givin' for _years _of my 
+_ life. _ _ _ And the
+
+Coda:
+| Bbadd9    | Bbadd9/G     | Cadd9,2  Cm7/F,4   D7+#9/F#,4   
+_love I have to _ give, I'll be _givin' for _years _of my
+| Gm        C79    | Ebmaj7,2  Em7b5/E,4  Cm7/F,4  || Gm [N: Break]
+_ life.

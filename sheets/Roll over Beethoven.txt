@@ -1,0 +1,61 @@
+Title: Roll Over Beethoven 
+Key: F Minor
+Tempo: 66
+Form: 
+    - Intro
+    - Verse 1
+    - Bridge 1
+    - Chorus
+    - Verse 3
+    - Verse 4
+    - Chorus 1
+Intro: 
+| Fm7 | Bb79 | Fm7 | Bb79 |
+
+Verse 1:
+| Fm7                                |Bb79                  | Db79    | Bb79
+_I gonna write a little letter, gonna _mail it to my local D-_J     _ It’s a
+| Ab6          | Bb79     C7#5        | Fm7    | Bb79
+_rocking little record that I _want my _jockey to   _play.   _         Roll
+| Db6                           | Db/Eb E7no5 |  Fm7    | Bb79
+_over Beethoven, gonna _hear it a-_gain   to-_day  _
+
+Verse 2  [use: Verse 1, textOnly]:
+_You know my temperature's rising, and the _jukebox is blowing a _ fuse. _ My
+_heart beats a rhythm and my _soul keeps _singing the _blues. _ Roll
+_over Beethoven, _tell Tchai-_kovsky the _news.  _Well if you 
+
+Bridge 1:
+|Db79                   | Db79                  | Ab6                  | F#7
+_feel it and like it.  _Well get your lover and _reel and rock it. _Roll it over and
+| F7                   | E7no5 Db/Eb | Ab6               | C7#5  
+_move on up just a trifle _further _and _reel and rock it, _roll it over, roll
+| Db6                  | Db/Eb     E7no5 | F7 
+_over Beethoven, _rocking in _two by _two. 
+
+Chorus:
+| Fm7/Bb  C7#5#9  | F79          | Fm7/Bb  C7#5#9  | F79  
+_Roll       _over Beet-_hoven   _Roll       _over Beet-_hoven
+| Fm7/Bb  C7#5#9  | Db6       | Db/Eb    E7no5        | Fm7   | Bb79
+_Roll       _over Beet-_hoven _Dig these _rhythm and  _blues _
+
+Verse 3 [use: Verse 1, textOnly]:
+_I've got a rocking pneumonia. I _need a shot of rhythm and _blues. _ I caught the
+_rollin' arthritis, (sitting) _down by the _rhythm re-_vue. _Roll 
+_over Beethoven _rocking in _two by _two. _ You know 
+
+Verse 4 [use: Verse 1, textOnly]:
+_she wiggles like a glow worm. _Dance like a _spinning _top. She's got a 
+_crazy partner. You _ought’a see him _reel and _rock. _As long as 
+_she got a dime, the _music will _never _stop.
+
+Chorus 1: 
+| Fm7/Bb  C7#5#9  | F79        | Fm7/Bb  C7#5#9  | F79  
+_Roll       _over Beet-_hoven  _Roll       _over Beet-_hoven
+| Fm7/Bb  C7#5#9  | Db6       | Db/Eb    E7no5        | Fm7 [Note: Break]
+_Roll       _over Beet-_hoven  _Dig these _rhythm and  _blues _ 
+
+
+
+
+

@@ -1,0 +1,101 @@
+Title: Famous Blue Raincoat 
+Author: Leonard Cohen
+Form:
+  - Intro
+  - Verse 1
+  - Chorus
+  - Verse 2
+  - Chorus 2
+  - Synth Solo over Verse
+  - Guitar Solo over Chorus
+  - Verse 3 
+  - Chorus 3
+  Key: G Minor
+Meter: 6/8
+Tempo: 78
+
+Intro:
+|| Dm79 [Note: ad hoc] ||
+
+Verse 1:
+    | Gm7                            | Ebmaj79
+_It's four in the morning, the _end of December. I'm
+| Cm79                             | Dm7
+_writing you now just to see if you're _better
+| Gm7                          | Ebmaj79
+_New York is cold, but I _like where I'm living. There's
+| Cm79                          | Dm7
+_music on Clinton Street _all through the evening. I
+| Gm7 Abmaj79| Am7                  
+_hear _that you're _building your little 
+| Gm7 Abmaj79| Fsus4/Db            
+_house _deep in the _desert
+| Cmadd2         | Dm7
+_You're living for _nothing now. I hope you're
+| Ebmaj79  Em7b5        | F           |   Eb/F  
+_keeping      _some kind of _record. _ Yes, and  
+
+
+Chorus:
+| Bbmaj7  | Ebmaj7   Dm7           | F
+_Jane came _by with a _lock of your _hair. She
+| F#dim7                     | Gm7
+_said that you gave it to _her. That
+| Abmaj7                                     | Am7 
+_night that you planned to go _clear
+| Eb69              | Dm79 | Dm79
+_Did you ever go _clear? _  The
+
+Verse 2 [Use: Verse 1, textOnly]:
+_last time I saw you, you _looked to much older. Your
+_famous blue raincoat was _torn at the sholder
+_You'd been to the station _ to meet ev'ry train. But you
+_came home alone without _Lili Marlene. So you                 
+_threaded _ my _woman to a flake           
+_flake _of your  _life
+_And when she came _home she was   
+_no-_bodies     _wife  _ and I
+
+Chorus 2:
+| Bbmaj7  | Ebmaj7   Dm7           | F
+_See you _there with a _rose in your _teeth. 
+| F#dim7                     | Gm7
+_Just one more thin gypsy _ thief when I see Jane's awa-
+| Abmaj7                                     | Am7 
+_ ke.  _ She 
+| Eb69              | Dm79 | Dm79
+_sends her re- _ gards _
+
+Solo:
+| Gm7 [S:G Aeolian]  | Ebmaj79
+| Cm79           | Dm7
+| Gm7            | Ebmaj79
+| Cm79           | Dm7
+| Gm7 Abmaj79 [S:Ab Major]    | Am7 [S:G Dorian/A Aeolian]                  
+| Gm7 [S:G Aeolian] Abmaj79 [S:Ab Major]    | Fsus4/Db            
+| Cmadd2 [S:Bb Major]        | Dm7 
+| Ebmaj79        | Dm79 |
+
+Verse 3 [Use: Verse 1, textOnly]:
+_What can I tell my  _brother my killer
+_what can I possibly _say. I
+_guess I forgive you. I _ guess that I miss you. I'm
+_glad that you stod In my _way. So                 
+_if you _ ever come _by here be it for           
+_Jane _or for  _me
+_You enemy's _sleeping now   
+_and his _woman is _ free _ Yes, and 
+
+Chorus 3:
+| Bbmaj7   | Ebmaj7   Dm7        | F
+_ thanks for, _the _trouble you _took from her eyes, I
+| F#dim7        | Gm7     | Abmaj79          | Am7   F7
+_thought it was _there for _good, so I never _ tried. _ And
+| Bbmaj7  | Ebmaj7   Dm7           | F
+_Jane came _by with a _lock of your _hair. She
+| F#dim7                | Gm7     
+_said that you gave it to _her, that
+| Abmaj79                     | Am7
+_night that you planned to go _clear 
+| Eb69 [N:break] | Dm7 [N:break]
+_Sincerely,       L. _Cohen

@@ -1,0 +1,60 @@
+Title: Hungry Wolf
+Author: J. T. Funny Paper Smith 
+Key: G Minor
+Form: 
+    - Intro
+    - Verse 1
+    - Verse 2 Mod.
+    - Verse 3
+    - Verse 4 Mod.
+    - Solo
+    - Verse 5 Mod.
+    - Verse 6
+    - Verse 7 Mod.
+Tempo: 113 
+Meter: 4/4
+
+Intro: 
+|: Gm7      D7sus4/A   | Bb6  D7sus4/A :|      
+
+Verse 1:
+| Gm7             D7sus4/A   | Bb6                  D7sus4/A        
+_I'm that hungry _wolf in the _ground is where I _dug my 
+| Gm7          D7sus4/A   |   Bb6          D7sus4/A
+_cave
+| Cm7   Bb6/D   | Eb79                          D7sus4
+_I'm that hungry _wolf and the _ground is where I _dug my
+| Gm7       D7sus4/A   |   Bb6          D7sus4/A   
+_cave. _ _ _I leave 
+| Ebmaj7                                  | Am7b5             D7#5b9           
+_prowling just at dark and get home in the _morning just a    _while ‘fore 
+| Gm              D7sus4/A     | Bb6                  D7sus4/A        
+_day.
+
+Verse 2 Mod.:
+| Abmaj79                     | Fm6                 | Gm7,4 Gm,4+8 Gm,4+8 Em7b5,8 | Em7b5,t1
+_ I stroll through dark places _threatening to do my _ part. _ _ _ _  With 
+| Ebmaj7,4+8        Dm7,8 Dm7,t2   | Dbmaj7,4+8   Bbm6/C,8 Bbm6/C,t2   
+_blood in my _eyes _ and _malice  _ _ in my 
+| Gm7       D7sus4/A   |   Bb6          D7sus4/A   |  
+_heart. 
+| Gm7       D7sus4/A   |   Bb6          D7sus4/A   |  
+_ _ _ _ In places
+
+Verse 3 [use: Verse 1, textOnly]:
+_I used to _go, I ain't been _there I been _blowed out by the 
+_wind. _ _ _In places
+_I used to _ go, I ain't been _there I been _blowed out by the 
+_wind. _ _ _ I did 
+_think one more time that I _just about come _to my 
+_end. _ _ _ I can 
+
+Verse 4 [use: Verse 2 Mod., textOnly]:
+_howl like a wolf and I can _bark just like a little _dog. _I can
+_howl like a wolf and I can _bark just like a little _dog. _I can
+_prowl and do _good, cause I _sleeps in a _hollow 
+_log. _ _ _
+
+Solo 1 [use: Verse 1, notesOnly]:
+
+Solo 2 [use: Verse 2 Mod., notesOnly]:
