@@ -103,14 +103,16 @@ async function handler( req: RequestExtended) {
     });
 }
 
-async function staticFile(req: RequestExtended, _filePath = '' ): Promise<Response> {
+async function staticFile(req: RequestExtended, __filePath = '' ): Promise<Response> {
   // handle static files
+  let filePath = ''
   try {
       // const url = new URL(req.url);
       // const fileName = filePath.length > 0 ? filePath : JSON.stringify(url.pathname)
-      const filePath = _filePath !== '' ? _filePath :  req.params.path + '/' + req.params.fileName
-      // console.debug(`Trying to read: '${fromRoot(filePath)}'`)
-      const data = await Deno.readFile( filePath.startsWith('/') ? '.' + filePath : './' + filePath )
+      const _filePath = __filePath !== '' ? __filePath :  req.params.path + '/' + req.params.fileName
+      filePath =  _filePath.startsWith('/') ? '.' + _filePath : './' + _filePath
+      console.debug(`Trying to read: '${filePath}'`)
+      const data = await Deno.readFile( filePath)
       const ext = filePath.split('.').pop()
       console.log(`Server sends file: ${filePath} with content-type: ${extToMime.get(ext ?? 'html')!}`)
       return new Response(data, {
@@ -120,7 +122,7 @@ async function staticFile(req: RequestExtended, _filePath = '' ): Promise<Respon
           },
       });   
   } catch (err) {
-      console.error(`staticFile handler got: ${err}`)
+      console.error(`staticFile handler for ${filePath} got: ${err}`)
       return routeNotFound(req)
   }
 }
