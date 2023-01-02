@@ -122,7 +122,7 @@ async function staticFile(req: RequestExtended, __filePath = '' ): Promise<Respo
           },
       });   
   } catch (err) {
-      console.error(`staticFile handler for ${filePath} got: ${err}`)
+      console.error(`staticFile handler for ${filePath} in directory ${Deno.cwd()} got: ${err}`)
       return routeNotFound(req)
   }
 }
