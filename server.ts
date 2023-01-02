@@ -20,6 +20,7 @@ await LS.loadAllSheets()
 //
 const extToMime = new Map([
     [ 'html', "text/html; charset=utf-8" ],
+    [ 'txt', "text/html; charset=utf-8" ],
     [ 'png', "image/svg+xml" ],
     [ 'svg', "image/svg+xml" ],
     [ 'json', "application/json; charset=utf-8" ]
@@ -110,10 +111,10 @@ async function staticFile(req: RequestExtended, __filePath = '' ): Promise<Respo
         // const url = new URL(req.url);
         // const fileName = filePath.length > 0 ? filePath : JSON.stringify(url.pathname)
         const _filePath = __filePath !== '' ? __filePath :  req.params.path + '/' + req.params.fileName
-        filePath =  _filePath.startsWith('/') ? Deno.cwd() + _filePath : Deno.cwd() + '/' + _filePath
+        filePath =  _filePath.startsWith('/') ? '.' + _filePath : './' + _filePath
         console.debug(`Trying to read: '${filePath}'`)
-        // Reading absolute path
-        const dataUint = await Deno.readFile( filePath) 
+        // Reading relative path
+        const dataUint = await Deno.readFile(filePath) 
         const ext = filePath.split('.').pop()
         console.log(`Server sends file: ${filePath} with content-type: ${extToMime.get(ext ?? 'html')!}`)
         if ( ext === 'html' || ext === 'svg' ) {
