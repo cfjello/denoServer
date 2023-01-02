@@ -110,7 +110,7 @@ async function staticFile(req: RequestExtended, _filePath = '' ): Promise<Respon
       // const fileName = filePath.length > 0 ? filePath : JSON.stringify(url.pathname)
       const filePath = _filePath !== '' ? _filePath :  req.params.path + '/' + req.params.fileName
       // console.debug(`Trying to read: '${fromRoot(filePath)}'`)
-      const data = await Deno.readFile(fromRoot(filePath))
+      const data = await Deno.readFile( filePath.startsWith('/') ? '.' + filePath : './' + filePath )
       const ext = filePath.split('.').pop()
       console.log(`Server sends file: ${filePath} with content-type: ${extToMime.get(ext ?? 'html')!}`)
       return new Response(data, {
