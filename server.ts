@@ -30,7 +30,7 @@ const routes: RouteIntf[] = [
   { name: "static", path: "/html/:fileName",             handler: staticFile},
   // { name: "menu",   path: "/api/v1/menu",             handler: menuHandler},
   // { name: "sheet",  path: "/api/v1/sheet/:sheetName", handler: sheetHandler},
-  { name: "test",   path: "/test/:arg1/:arg2",        handler: testHandler },
+  { name: "test",   path: "/test/:arg1/:arg2",           handler: testHandler },
   { name: "favicon",   path: "/favicon.png",             handler: pngHandler },
   { name: "main",   path: "/",                           handler: handler},
 ]
@@ -80,7 +80,9 @@ async function router(req: Request): Promise<Response> {
   return routeNotFound(req as RequestExtended)
 }
 
-
+//
+// Handlers
+//
 async function handler( req: RequestExtended) {
   // List the posts in the `blog` directory located at the root
   // of the repository.
@@ -98,7 +100,7 @@ async function handler( req: RequestExtended) {
 }
 
 async function staticFile(req: RequestExtended, _filePath = '' ): Promise<Response> {
-  // handle files
+  // handle static files
   try {
       // const url = new URL(req.url);
       // const fileName = filePath.length > 0 ? filePath : JSON.stringify(url.pathname)
@@ -122,9 +124,7 @@ async function staticFile(req: RequestExtended, _filePath = '' ): Promise<Respon
 async function pngHandler(req: RequestExtended ): Promise<Response> {
   return await staticFile(req, req.params.path)
 } 
-//
-// Handlers
-//
+
 async function testHandler(req: RequestExtended): Promise<Response> {
   console.log("Method:", req.method);
 
