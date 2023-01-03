@@ -340,7 +340,7 @@
                     <h5>Form: <span v-html="sheet.header.form.join(',')"/> </h5>  
                 </div>
                 <div v-for="section in sheet.sections" v-bind:key="section.name">
-                    <div class="col-12"><h4><span>{{section.name}}:</span></h4></div>
+                    <div class="col-11"><h4><span>{{section.name}}:</span></h4></div>
                     <div v-bind:id="section.name"></div>
                 </div>
             </main>
