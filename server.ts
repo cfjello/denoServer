@@ -144,8 +144,8 @@ async function staticFile(req: RequestExtended, __filePath = '' ): Promise<Respo
         }
     } catch (err) {
         console.error(`staticFile handler for ${filePath} in directory ${Deno.cwd()} got: ${err}`)
-        return handler(req)
-        // return routeNotFound(req)
+        // return handler(req)
+        return routeNotFound(req)
     }
 }
 
@@ -172,7 +172,7 @@ async function testHandler(req: RequestExtended): Promise<Response> {
 
 
 async function mainPage(req: RequestExtended): Promise<Response> {
-    const fileName = "/html/LeadSheetVue.html"
+    const fileName = "/html/leadSheetVue.html"
     return await staticFile(req, fileName)
 }
 
