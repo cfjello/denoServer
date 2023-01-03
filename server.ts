@@ -89,12 +89,15 @@ async function router(req: Request): Promise<Response> {
 
 //
 // Handlers
-//
+// 
 async function handler( req: RequestExtended) {
     // List the posts in the `blog` directory located at the root of the repository.
+    try {
     const posts = [];
     for await (const post of Deno.readDir(`./blog`)) {
+        const content = await Deno.readFile('./blog/' + post.name ) 
         posts.push(post);
+        posts.push({ name: post.name, content: content });
     }
     // Return JSON.
     return new Response(JSON.stringify(posts, null, 2), {
@@ -102,6 +105,10 @@ async function handler( req: RequestExtended) {
         "content-type": "application/json",
         },
     });
+} catch(err) {
+    console.log(`handler() got: ${err}`)
+    return routeNotFound(req)
+}
 }
 
 async function staticFile(req: RequestExtended, __filePath = '' ): Promise<Response> {
