@@ -1,12 +1,8 @@
 import { serve} from    "https://deno.land/std/http/server.ts"
 import { Status } from  'https://deno.land/std@0.53.0/http/http_status.ts';
-import { path } from    "https://deno.land/x/compress@v0.4.1/deps.ts";
 import { LeadSheet } from "https://raw.githubusercontent.com/cfjello/leadsheet/main/mod.ts"
 
-const fromRoot = (str: string) => path.normalize(Deno.cwd() + ( str.startsWith('/') ? str : '/' + str ) );
-
 type RequestExtended = Request & { params: Record<string, string>, query: Record<string, string> }
-
 
 //
 // Initialize data for main page
@@ -115,8 +111,6 @@ async function staticFile(req: RequestExtended, __filePath = '' ): Promise<Respo
     // handle static files
     let filePath = ''
     try {
-        // const url = new URL(req.url);
-        // const fileName = filePath.length > 0 ? filePath : JSON.stringify(url.pathname)
         const _filePath = __filePath !== '' ? __filePath :  req.params.path + '/' + req.params.fileName
         filePath =  _filePath.startsWith('/') ? '.' + _filePath : './' + _filePath
         console.debug(`Trying to read: '${filePath}'`)
@@ -155,7 +149,6 @@ async function pngHandler(req: RequestExtended ): Promise<Response> {
 
 async function testHandler(req: RequestExtended): Promise<Response> {
   console.log("Method:", req.method);
-
   const url = new URL(req.url);
   const path = "\nfullPath:" +  url.pathname
   const params = JSON.stringify(req.params)
@@ -199,7 +192,6 @@ async function sheetHandler(req: RequestExtended): Promise<Response> {
     console.log(`Server GOT request for Sheet`)
     
     const sheet =  req.params.sheetName ?? '__undefined__'
-
     const transpose = parseInt(req.query.t)
     const sharpFlat = req.query.sf
     const reload = req.query.rl === 'yes' ? true: false
@@ -223,8 +215,5 @@ async function sheetHandler(req: RequestExtended): Promise<Response> {
 //
 // Start the Server
 //
-// const PORT = 3000;
-// serve(router, { port: PORT });
-// console.log(`🚀 Server is running on http://localhost:${PORT}`);
 serve(router)
 
