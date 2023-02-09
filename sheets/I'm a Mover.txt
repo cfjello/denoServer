@@ -21,11 +21,11 @@ _I was born by the _river. _Just like this _river I been
 _Moving ever _since.          _Ain’t got no-_one
 | Cmaj79,2          Cm6,2                     | Gadd9/B,2                    A79,2  | 
      _to call my _own,                _you know I been _moving since the         
-| Am79        E7#9/G#   | Gm6       C79   |
+| Am79        E7/G#   | Gm6       C79   |
    _day I was _born.     _ Ye-e-s      _I'm    a    
 
 Chorus:
-| Fmaj7,2+4    | Gmaj7     | 
+| Fmaj7   | Gmaj7     | 
 _Mover babe, I’m a     _mover  
 |   F6,2              E7,8 E7,4        Ebmaj79,8   | Ebmaj79,t2      Ebmaj79,t2 |
 _Nothing seems to    _slow _me _down _ 
@@ -41,10 +41,10 @@ _And come back and _tell me _what you have _learned. I'm a
 Chorus 2 [use: Chorus, textAndNotes]:
 
 Solo: 
-| Em7 [S:G Major]  Am79 | F#m7b5,4  F#m7b5,t8  B7,8 B7,t2  | 
-| Em7,4+8   Em/D,8  Cmaj79,4+8   Cmaj79/B,8  | Am79,4 Am79,8  Gmaj7,8   Gmaj7,t2 |
-| Em7 [S:G Major]  Am79 | F#m7b5,4  F#m7b5,t8  B7,8 B7,t2  | 
-| Em7,4+8   Em/D,8  Cmaj79,4+8   Cmaj79/B,8  | Am79,4 Am79,8  Gmaj7,8   Gmaj7,t2 |
+| Em7 [S:G Major]  Am79 | F#m7b5,4  F#m7b5,t8  B7+,8 B7+,t2  | 
+| Em7,4  Em7/D,4  Cmaj79,4   Cmaj79/B,4  | Am79,4 Am79,8  Gmaj7,8   B7,t2 [N: x3]|
+| Em7 [S:G Major]  Am79 | F#m7b5,4  F#m7b5,t8  B7+,8 B7+,t2  | 
+| Em7,4   Em7/D,4  Cmaj79,4   Cmaj79/B,4  | Am79,4 Am79,8  Gmaj7,8   Gmaj7,t2 |
 | D7sus4  |
 
 Verse 3  [use: Verse 1, textOnly]: 
@@ -56,4 +56,4 @@ _need to re-_turn to the _long winding _road. I'm a
 Chorus 3 [use: Chorus, textAndNotes]:
 
 Coda:  
-| r,4 F6,4 E7,8 E7,4 Ebmaj79,8 | Ebmaj79,t1 | R,4  Am7b5,4  Abmaj79,8  Abmaj79,4 G,8 | G,t1  |
+| r,4 F6,4 E7,8 E7,4 Ebmaj79,8 | Ebmaj79,t1 | R,4  Am7b5,4  Abmaj79,8  Abmaj79,4 Gmaj79,8 | Gmaj79,t1  |
